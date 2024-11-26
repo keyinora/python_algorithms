@@ -1,8 +1,9 @@
 def merge_sort(nums):
     if len(nums) < 2:
         return nums
-    first = merge_sort(nums[: len(nums) // 2])
-    second = merge_sort(nums[len(nums) // 2 :])
+    mid = len(nums) // 2
+    first = merge_sort(nums[:mid])
+    second = merge_sort(nums[mid:])
     return merge(first, second)
 
 
